@@ -9,12 +9,12 @@ public class UsuarioFac {
     ArrayList<Usuarios>dadosUsuarios = new ArrayList<Usuarios>();
     ArrayList<Usuarios>dadosUsuarios2 = new ArrayList<Usuarios>();
     UsuariosDao usuariosDao = new UsuariosDao();
-  
+
     public void UsuarioFac(){
         
     }
 
-    public boolean validaUsuario (String login, String senha){
+     public boolean validaUsuario (String login, String senha){
         String log;
         String senh;
         
@@ -28,13 +28,9 @@ public class UsuarioFac {
          log =  u.getLogin();
          senha = u.getSenha();
                  }
-        
-        
-        if (log == null){
-          if (senh == null) {
-              JOptionPane.showMessageDialog(null, "Usuario Nao cadastrado!!");
-          }
-        }
         return true;
+        
     }
+    
+     
 }
