@@ -20,7 +20,7 @@ public class ConexaoBD1 {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/locadora", "adm","adm");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/exercicio2Biblioteca", "adm","adm");
         } catch (Exception e) {
             System.err.println(e);
         }

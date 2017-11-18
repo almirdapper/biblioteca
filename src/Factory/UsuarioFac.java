@@ -15,20 +15,10 @@ public class UsuarioFac {
     }
 
      public boolean validaUsuario (String login, String senha){
-        String log;
-        String senh;
+        boolean check = false;
         
-        usuarios.setLogin(login);
-        usuarios.setSenha(senha);
-        dadosUsuarios.add(usuarios);
-        
-        dadosUsuarios2 = usuariosDao.validaUsuarioDao(dadosUsuarios);
-        
-        for(Usuarios u: dadosUsuarios2){
-         log =  u.getLogin();
-         senha = u.getSenha();
-                 }
-        return true;
+        check = usuariosDao.validaUsuarioDao(login, senha);
+        return check;
         
     }
     
