@@ -21,6 +21,27 @@ public class UsuarioFac {
         return check;
         
     }
+     
+     public void cadastroUsuario (String nomeUsuario, String login, String senha, String dataNascimento){
+         usuarios.setNome(nomeUsuario);
+         usuarios.setLogin(login);
+         usuarios.setSenha(senha);
+         usuarios.setDataNascimento(dataNascimento);
+         dadosUsuarios.add(usuarios);
+         usuariosDao.cadastroUsuarioDAO(dadosUsuarios);
+         
+     }
     
+      public ArrayList<Usuarios> listaUsuariosFac (){
+        
+        dadosUsuarios =usuariosDao.listarUsuariosDao();
+        
+        return dadosUsuarios;
+    }
+      
+      public void limparUsuariosFac(){
+        usuariosDao.limparUsuariosDAO();
+    }
+      
      
 }

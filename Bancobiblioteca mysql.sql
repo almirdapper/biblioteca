@@ -27,3 +27,4 @@ dataNascimento varchar(10)
 insert into usuarios (nome, login, senha) values('administrador', 'adm', 'adm');
 
 select * from usuarios;
+select * from livros;
